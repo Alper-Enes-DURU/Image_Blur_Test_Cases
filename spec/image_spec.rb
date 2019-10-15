@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 RSpec.describe Image, type: :model do
-  describe "blurring should work" do
-    it "should blur a standard image" do
+  describe "blurring the image" do
+    it "will blur the image" do
       input = [
         [0, 0, 0, 0],
         [0, 0, 0, 0],
@@ -24,7 +24,7 @@ RSpec.describe Image, type: :model do
      expect(image.blur.data).to eq expected
     end
 
-    it "should blur a standard image" do
+    it "will blur the image" do
       input = [
         [0, 0, 0, 0],
         [0, 0, 1, 0],
@@ -46,7 +46,7 @@ RSpec.describe Image, type: :model do
      expect(image.blur.data).to eq expected
     end
 
-    it "should blur a standard image" do
+    it "will blur the image" do
       input = [
         [0, 0, 0, 0],
         [0, 0, 0, 0],
@@ -69,7 +69,3 @@ RSpec.describe Image, type: :model do
     end
   end
 end
-
-#@array => @data
-#attr_reader :data
-#blur(method name)
